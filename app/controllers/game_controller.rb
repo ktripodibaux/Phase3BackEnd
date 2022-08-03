@@ -2,8 +2,11 @@ class GameController <ApplicationController
 
     get "/games" do
 
-        # {we_in: "Hello World"}.to_json
+        # params[:results].map do |each|
+        #     hope = params[:incorrect_answers]
+        #     new_hope = hope.join(", ")
+        #     Question.create(question: each[:question], correct_answer: each[:correct_answer], incorrect_answer: new_hope).to_json
+        # end
         
-        Game.all.to_json
     end
 end
