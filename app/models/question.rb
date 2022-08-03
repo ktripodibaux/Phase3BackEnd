@@ -1,5 +1,6 @@
 class Question <ActiveRecord::Base
-    has_many :games
+    
+    belongs_to :game
     has_many :users, through: :games
 
   

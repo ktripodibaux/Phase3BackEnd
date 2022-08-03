@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_01_195327) do
+ActiveRecord::Schema.define(version: 2022_08_02_194547) do
 
   create_table "games", force: :cascade do |t|
     t.integer "score"
@@ -26,9 +26,16 @@ ActiveRecord::Schema.define(version: 2022_08_01_195327) do
     t.string "category"
   end
 
+  create_table "results", force: :cascade do |t|
+    t.integer "score"
+    t.string "name"
+    t.string "userUrl"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "userUrl"
+    t.integer "score"
   end
 
 end
