@@ -1,12 +1,77 @@
 class QuestionController <ApplicationController
 
-    get "/questions" do
-        num = rand(1...40)
-        random_question = Question.all.find{|each| num == each.id}
+        easy_array = []
+        easy_array[0] = rand (1...41)
+        for i in 1...40
+            x = rand(1...41)
+            type = easy_array.include?(x) ? "yes" : "no"
+            if type == "no"
+            easy_array[i] = x
+            else
+                redo
+            end
+        end
         
-        random_question.to_json
+        medium_array = []
+        medium_array[0] = rand (41...81)
+        for i in 1...40
+            x = rand(41...81)
+            type = medium_array.include?(x) ? "yes" : "no"
+            if type == "no"
+            medium_array[i] = x
+            else
+                redo
+            end
+        end
+
+        hard_array = []
+        hard_array[0] = rand (81...121)
+        for i in 1...40
+            x = rand(81...121)
+            type = hard_array.include?(x) ? "yes" : "no"
+            if type == "no"
+            hard_array[i] = x
+            else
+                redo
+            end
+        end
+
+
+  
+    
+    
+    
+    get "/questions/round/1" do
+        # easy_num = rand(1...40).to_a
+        # med_num = rand(41...80)
+        # hard_num = rand(81...120)
+
+        # r = SimpleRandom.new
+        # r.set_seed
+
+        easy_array.to_json
+
+        #random_question = Question.all.find{|each| easy_num == each.id}
+        
+        #random_question.to_json
     end
 
+    get "/questions/round/2" do
+
+        medium_array.to_json
+
+    end
+
+    get "/questions/round/3" do
+
+        hard_array.to_json
+        
+    end
+    
+    get "/questions/:id" do
+        Question.find(params[:id]).to_json
+    
+    end
     #This post is just for seeding the database with questions
     post '/questions' do
         params[:results].map do |each|
