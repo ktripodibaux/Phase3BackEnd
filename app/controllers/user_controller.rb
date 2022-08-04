@@ -22,4 +22,10 @@ class UserController <ApplicationController
         user_to_update.update(score: user_to_update.score + 1)
         user_to_update.to_json
     end
+
+    delete '/users/:id' do
+        user_to_be_nuked = User.find(params[:id])
+        user_to_be_nuked.destroy
+        user_to_be_nuked.to_json
+    end
 end

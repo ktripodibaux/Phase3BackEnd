@@ -3,7 +3,7 @@ puts "🌱 Seeding spices..."
 # Game.destroy_all
 User.destroy_all
 # Question.destroy_all
-# Result.destroy_all
+Result.destroy_all
 
 puts "all seed destroyed"
 
@@ -12,6 +12,20 @@ zev =       User.create(name: "Zev", userUrl: "zev.com", score: 4)
 kurt =      User.create(name: "Kurt", userUrl: "kurt.com", score: 5)
 sam =       User.create(name: "Sam", userUrl: "Sam.com", score: 3)
 
+Result.create(score: 2, name: "Jeremy", userUrl: 'jeremy.com')
+Result.create(score: 4, name: "Zev", userUrl: 'Zev.com')
+Result.create(score: 9, name: "Sam", userUrl: 'Sam.com')
+Result.create(score: 5, name: "Zev", userUrl: 'Zev.com')
+Result.create(score: 21, name: "Kurt", userUrl: 'Kurt.com')
+Result.create(score: 32, name: "Sam", userUrl: 'Sam.com')
+Result.create(score: 1, name: "Kurt", userUrl: 'Kurt.com')
+Result.create(score: 16, name: "Zev", userUrl: 'Zev.com')
+Result.create(score: 15, name: "Kurt", userUrl: 'Kurt.com')
+Result.create(score: 5, name: "Jeremy", userUrl: 'Jeremy.com')
+Result.create(score: 36, name: "Kurt", userUrl: 'Kurt.com')
+Result.create(score: 21, name: "kelly", userUrl: 'kelly.com')
+Result.create(score: 10, name: "jason", userUrl: 'Kurt.com')
+Result.create(score: 19, name: "harry", userUrl: 'Kurt.com')
 puts "all users created"
 
 # q1 = Question.create(question: 'Which of the following languages is used as a scripting language in the Unity 3D game engine?', correct_answer: "C#", incorrect_answer: [

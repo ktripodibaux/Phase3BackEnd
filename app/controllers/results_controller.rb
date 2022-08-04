@@ -4,7 +4,7 @@ class ResultController <ApplicationController
 
         # {we_in: "Hello World"}.to_json
         
-        Result.all.to_json
+        Result.all.sort{|a,b| b.score <=> a.score}.to_json
     end
 
     post "/results" do
