@@ -23,9 +23,11 @@ class UserController <ApplicationController
         user_to_update.to_json
     end
 
-    delete '/users/:id' do
-        user_to_be_nuked = User.find(params[:id])
-        user_to_be_nuked.destroy
-        user_to_be_nuked.to_json
+    delete '/users' do
+        User.destroy_all.to_json
+        #The below method is for when we were removing individual users:
+        #user_to_be_nuked = User.find(params[:id])
+        #user_to_be_nuked.destroy
+        #user_to_be_nuked.to_json
     end
 end

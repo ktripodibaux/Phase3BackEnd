@@ -1,15 +1,14 @@
 class QuestionController <ApplicationController
 
-    get "/questions/:id" do
-
-        question = Question.find(params[:id])
+    get "/questions" do
+        num = rand(1...40)
+        random_question = Question.all.find{|each| num == each.id}
         
-        question.to_json
+        random_question.to_json
     end
 
     #This post is just for seeding the database with questions
     post '/questions' do
-        
         params[:results].map do |each|
             hope = each[:incorrect_answers]
             new_hope = hope.join(", ")
