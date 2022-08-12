@@ -19,13 +19,14 @@ Result.create(score: 5, name: "Zev", userUrl: 'Zev.com')
 Result.create(score: 21, name: "Kurt", userUrl: 'Kurt.com')
 Result.create(score: 32, name: "Sam", userUrl: 'Sam.com')
 Result.create(score: 1, name: "Kurt", userUrl: 'Kurt.com')
-Result.create(score: 16, name: "Zev", userUrl: 'Zev.com')
+Result.create(score: 69, name: "Z3v_69420", userUrl: 'https://c.tenor.com/oLQmCvr3JTcAAAAM/fuck-you-middle-finger.gif')
 Result.create(score: 15, name: "Kurt", userUrl: 'Kurt.com')
 Result.create(score: 5, name: "Jeremy", userUrl: 'Jeremy.com')
 Result.create(score: 36, name: "Kurt", userUrl: 'Kurt.com')
 Result.create(score: 21, name: "kelly", userUrl: 'kelly.com')
-Result.create(score: 10, name: "jason", userUrl: 'Kurt.com')
-Result.create(score: 19, name: "harry", userUrl: 'Kurt.com')
+Result.create(score: 1, name: "jason", userUrl: 'Kurt.com')
+Result.create(score: -8, name: "harry", userUrl: 'Kurt.com')
+Result.create(score: 100, name: "Sam", userUrl: "https://miro.medium.com/max/3150/1*77FS-Zxw0vg8dUbM5jH0xw.jpeg")
 puts "all users created"
 
 # q1 = Question.create(question: 'Which of the following languages is used as a scripting language in the Unity 3D game engine?', correct_answer: "C#", incorrect_answer: [

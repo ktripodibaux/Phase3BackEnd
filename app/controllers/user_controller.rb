@@ -9,10 +9,10 @@ class UserController <ApplicationController
 
     post '/users' do
         # binding.pry 
-        p1 =User.create(name: params[:player1Name], userUrl: params[:player1Picture], score: 0)
-        p2 =User.create(name: params[:player2Name], userUrl: params[:player2Picture], score: 0)
-        p3 =User.create(name: params[:player3Name], userUrl: params[:player3Picture], score: 0)
-        p4 =User.create(name: params[:player4Name], userUrl: params[:player4Picture], score: 0)
+        p1 =User.create(name: params[:player1Name], userUrl: params[:player1Picture], score: params[:player1Score])
+        p2 =User.create(name: params[:player2Name], userUrl: params[:player2Picture], score: params[:player2Score])
+        p3 =User.create(name: params[:player3Name], userUrl: params[:player3Picture], score: params[:player3Score])
+        p4 =User.create(name: params[:player4Name], userUrl: params[:player4Picture], score: params[:player4Score])
         [p1,p2,p3,p4].to_json
     end
 
